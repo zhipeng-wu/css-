@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 
+    transition-property: width;  //过度属性
+    transition-duration: 1s;    //过度时间
+    transition-timing-function: linear; //动画方式  默认ease
+    transition-delay: 2s;      //规定过渡效果何时开始
+
+    简写
+    transition: 过度属性 过度时间。  多个属性用 ， 号隔开
+    transition: all 2s linear  2s;   //2秒后开始动画， 动画时长也是2秒。 所有属性变化
+  */
+  .box1,
+  .box2 {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    background-color: palevioletred;
+    margin: 100px 100px;
+    box-shadow: 1px 1px 8px 2px #823636;
+    resize: both;
+    overflow: auto;
+    /* transition: width 2s, height 2s, transform 2s, opacity 2s; */
+    /* transition: all 2s linear 2s; */
+  }
+
+
+  /* .box2:hover {
+    transform: scale(0);
+    width: 120px;
+    height: 120px;
+    background-color: #452ab4;
+    opacity: 0;
+  } */
+</style>
+
+<body>
+  <div class="box1">
+    I am box
+  </div>
+  <div class="box2">
+    I am box2
+  </div>
+
+
+</body>
+
+</html>

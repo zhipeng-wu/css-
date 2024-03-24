@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../style/iconfont/iconfont.css">
+  <link rel="stylesheet" href="../style/reset.css">
+</head>
+<style>
+  /*  scroll-behavior: smooth;  锚点点击时候平滑过度动画 */
+  * {
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+    scroll-behavior: smooth;
+  }
+
+  section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    font-weight: 800;
+    color: rgba(255, 255, 255, .1);
+    background-color: #333;
+    text-transform: uppercase;
+  }
+
+  section:nth-child(even) {
+    background: #444;
+  }
+
+  header {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 400px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, .5));
+  }
+
+  header nav {
+    display: flex;
+    width: 350px;
+  }
+
+  header nav a {
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    height: 60px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  a .iconfont {
+    position: relative;
+    display: block;
+    line-height: 65px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: .5s;
+    color: #666;
+  }
+
+  header nav a.active .iconfont {
+    transform: translateY(-32px);
+    color: var(--crl);
+  }
+
+  header nav a .text {
+    position: absolute;
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: .5s;
+    transform: translateY(15px);
+  }
+
+  header nav a.active .text {
+    transform: translateY(-4px);
+    background: var(--crl);
+    opacity: 1;
+  }
+
+  .indicator {
+    position: absolute;
+    top: -35px;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .5s;
+    z-index: 1;
+  }
+
+  .indicator::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -28px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 15px 18px #fff;
+  }
+
+  .indicator::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -28px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -15px 18px #fff;
+  }
+
+  header nav a:nth-child(1).active~.indicator {
+    transform: translateX(0);
+  }
+
+  header nav a:nth-child(2).active~.indicator {
+    transform: translateX(70px);
+  }
+
+  header nav a:nth-child(3).active~.indicator {
+    transform: translateX(140px);
+  }
+
+  header nav a:nth-child(4).active~.indicator {
+    transform: translateX(210px);
+  }
+
+  header nav a:nth-child(5).active~.indicator {
+    transform: translateX(280px);
+  }
+</style>
+
+<body>
+  <header>
+    <nav>
+      <a href="#home" style="--crl:#f3218b" class="active">
+        <span class="iconfont icon-play"></span>
+        <span class="text">home</span>
+      </a>
+      <a href="#profile " style="--crl:#2196f3">
+        <span class="iconfont icon-sequence"></span>
+        <span class="text">profile</span>
+      </a>
+      <a href="#messages" style="--crl:#008a1b">
+        <span class="iconfont icon-yinle"></span>
+        <span class="text">messages</span>
+      </a>
+      <a href="#Photos" style="--crl:#dc1dff">
+        <span class="iconfont icon-duanshipinhuati"></span>
+        <span class="text">Photos</span>
+      </a>
+      <a href="#setting" style="--crl:#d56f1d">
+        <span class="iconfont icon-logo"></span>
+        <span class="text">setting</span>
+      </a>
+      <div class="indicator"></div>
+    </nav>
+  </header>
+  <section id="home">Home</section>
+  <section id="profile">Profile</section>
+  <section id="messages">Messages</section>
+  <section id="Photos">Photos</section>
+  <section id="setting">Sttings</section>
+</body>
+<script>
+  let sec = document.querySelectorAll("section")
+  let links = document.querySelectorAll("header nav a")
+  console.log(links);
+  console.log(sec);
+  window.onscroll = () => {
+    sec.forEach(section => {
+      let top = window.scrollY;
+      let offset = section.offsetTop;
+      let height = section.offsetHeight;
+      let id = section.getAttribute("id");
+      if (top >= offset && top < offset + height) {
+        links.forEach(link => {
+          link.classList.remove("active");
+          document.querySelector('header nav a[href*=' + id + ']').classList.add("active")
+        })
+      }
+    })
+  }
+</script>
+
+</html>

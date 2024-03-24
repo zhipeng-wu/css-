@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .box1,
+  .box2 {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    background-color: palevioletred;
+    margin: 100px 100px;
+    box-shadow: 1px 1px 8px 2px #823636;
+  }
+
+  /* 
+  translate(x,y) 移动: 根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。 translate(50px, 100px);
+  rotate()  旋转 : 给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。
+  scale(x,y) 缩放，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数：
+  skew(skewX,skewY)  表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜。
+  */
+  .box2 {
+    /* transform: translate(50px, 100px); */
+    transform: rotate(30deg);
+    /* transform: scale(1.5, 1.5); */
+    /* transform: skew(30deg, -10deg); */
+
+    margin-top: 100px;
+  }
+</style>
+
+<body>
+  <div class="box1">
+    I am box
+  </div>
+  <div class="box2">
+    I am box2
+  </div>
+  <div>
+    <i class="iconfont icon-back"></i>
+  </div>
+
+</body>
+
+</html>

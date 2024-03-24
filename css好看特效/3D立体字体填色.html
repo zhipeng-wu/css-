@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../style/iconfont/iconfont.css">
+  <link rel="stylesheet" href="../style/reset.css">
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #353535;
+  }
+
+  .container h2 {
+    position: absolute;
+    font-size: 12em;
+    color: #444;
+    text-transform: uppercase;
+    line-height: 1em;
+    text-shadow: -2px 2px 0 #222,
+      -4px 4px 0 #222,
+      -6px 6px 0 #222,
+      -8px 8px 0 #222,
+      -10px 10px 0 #222,
+      -10px 10px 0 #222,
+      -12px 12px 0 #222,
+      -14px 14px 0 #222,
+      -16px 16px 0 #222,
+      -18px 18px 20px #222,
+      -18px 18px 30px #222,
+      -18px 18px 50px #222;
+  }
+
+  .container h2:nth-child(2) {
+    z-index: 100;
+    color: #03a9f4;
+    text-transform: uppercase;
+    text-shadow: -2px 2px 0 #03a9f4,
+      -4px 4px 0 #03a9f4,
+      -6px 6px 0 #03a9f4,
+      -8px 8px 0 #03a9f4,
+      -10px 10px 0 #03a9f4,
+      -10px 10px 0 #03a9f4,
+      -12px 12px 0 #03a9f4,
+      -14px 14px 0 #03a9f4,
+      -16px 16px 0 #000,
+      -18px 18px 20px #000 -18px 18px 30px #000,
+      -18px 18px 50px #000;
+    clip-path: circle(20% at 51% 100%);
+    transition: clip-path 2.5s;
+  }
+
+  .container h2:hover:nth-child(2) {
+    clip-path: circle(40% at 50% 99%);
+  }
+
+  .container h2:nth-child(3) {
+    z-index: 101;
+    color: #2cff37;
+    text-transform: uppercase;
+    text-shadow: -2px 2px 0 #08a010,
+      -4px 4px 0 #08a010,
+      -6px 6px 0 #08a010 -8px 8px 0 #08a010,
+      -10px 10px 0 #08a010,
+      -10px 10px 0 #08a010,
+      -12px 12px 0 #08a010,
+      -14px 14px 0 #08a010,
+      -16px 16px 0 #000,
+      -18px 18px 20px #000 -18px 18px 30px #000,
+      -18px 18px 50px #000;
+    clip-path: circle(28% at 0% 10%);
+    transition: clip-path 2.5s;
+  }
+
+  .container h2:hover:nth-child(3) {
+    clip-path: circle(118% at 0% 10%);
+  }
+
+  .container h2:nth-child(4) {
+    z-index: 102;
+    color: #e91e63;
+    text-transform: uppercase;
+    text-shadow: -2px 2px 0 #ac0e50,
+      -4px 4px 0 #ac0e50,
+      -6px 6px 0 #ac0e50,
+      -8px 8px 0 #ac0e50,
+      -10px 10px 0 #ac0e50,
+      -10px 10px 0 #ac0e50,
+      -12px 12px 0 #ac0e50,
+      -14px 14px 0 #ac0e50,
+      -16px 16px 0 #000,
+      -18px 18px 20px #000 -18px 18px 30px #000,
+      -18px 18px 50px #000;
+    clip-path: circle(18% at 100% 77%);
+    transition: clip-path 2.5s;
+  }
+
+  .container h2:hover:nth-child(4) {
+    clip-path: circle(110% at 100% 50%);
+  }
+</style>
+
+<body>
+  <div class="container">
+    <h2>create</h2>
+    <h2>create</h2>
+    <h2>create</h2>
+    <h2>create</h2>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* 方式一 flex  无需知道子元素高度*/
+  .box1 {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    background-color: palegreen;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box2 {
+    /* height: 150px;
+    width: 150px; */
+    background-color: blueviolet;
+  }
+
+  /* 方式二 transform+absolute  无需知道子元素高度 
+  .box1 {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: palegreen;
+  }
+
+  .box2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
+    background-color: blueviolet;
+  }*/
+
+
+
+  /* 方式三 flex+margin 无需知道子元素高度   后面4种都需要指定子元素宽高
+  .box1 {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    background-color: palegreen;
+    justify-content: center;
+  }
+
+  .box2 {
+    height: 150px;
+    width: 150px;
+    background-color: blueviolet;
+    margin: auto;
+  }*/
+
+
+  /* 方式四  
+  .box1 {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: palegreen;
+  }
+
+  .box2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    background-color: blueviolet;
+  }
+  */
+
+  /* 方式5   absolute+margin负值  transfrom:translate(-50%,-50%)原理一样
+  .box1 {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: palegreen;
+  }
+
+  .box2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 150px;
+    width: 150px;
+    margin-top: -75px;
+    margin-left: -75px;
+    background-color: blueviolet;
+
+  }*/
+  /* 方式6   line-height + vertical-align 
+  .box1 {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: palegreen;
+    line-height: 400px;
+    text-align: center;
+  }
+
+  .box2 {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    background-color: blueviolet;
+    vertical-align: middle;
+  }*/
+
+  /* 方式7    absolute + calc 
+  .box1 {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: palegreen;
+  }
+
+  .box2 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: blueviolet;
+    left: calc(50% - 75px);
+    top: calc(50% - 75px);
+  }
+  */
+</style>
+
+<body>
+  <div class="box1">
+    <div class="box2">hello world</div>
+  </div>
+</body>
+
+</html>
